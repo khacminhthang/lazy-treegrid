@@ -1,0 +1,8 @@
+.control-section {
+    width: 80vw !important;
+    height: 60vh !important;
+}
+
+:ng-deep body>div {
+    display: none !important;
+}

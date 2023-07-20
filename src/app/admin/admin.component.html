@@ -1,0 +1,18 @@
+<div class="control-section">
+  <ejs-treegrid #treegrid [dataSource]='data' childMapping='subtasks' [treeColumnIndex]='0'
+    (expanding)='onExpanding($event)'>
+    <e-columns>
+      <e-column field='taskID' headerText='Task ID' width='70' textAlign='Right'>
+        <ng-template #template let-data>
+          <span *ngIf="data?.subtasks?.length ==0" [attr.id]="data.taskID" class="e-icons e-treegridcollapse"></span>
+          {{data.taskID}}
+        </ng-template>
+      </e-column>
+      <e-column field='taskName' headerText='Task Name' width='200'></e-column>
+      <e-column field='duration' headerText='Duration' width='80' textAlign='Right'></e-column>
+      <e-column field='progress' headerText='Progress' width='80' textAlign='Right'></e-column>
+      <e-column field='priority' headerText='Priority' width='90'></e-column>
+    </e-columns>
+
+  </ejs-treegrid>
+</div>
